@@ -45,7 +45,7 @@ class Stove{
 
 int main() {
 
-
+//This is an comment
     try {
         Stove stove(100000);  // Invalid input, will throw
         stove.getTemperature();  // Won’t be executed
