@@ -1,0 +1,2592 @@
+#include <iostream>
+
+int main()
+{
+
+    int a = 10;
+    int b = 20;
+
+    std::cout << "Hello India\n" << std::endl;
+    std::cout << "Jamal" << std::endl;
+    std::cout << "Globe" << "\n";
+    return 0;
+}
+
+-----------------------------------------------------
+
+#include <iostream>
+
+int main()
+{
+    //Int - which stores integers
+    int a ;
+    a = 10;
+    int b = 20;
+
+    //float - which stores the decimal
+    float price = 10.45;
+    float gpa = 2.8;
+    float percent = 77.53;
+
+    //boolean - which stores the true or false
+    bool isStudent = false;
+    bool isChild = true;
+
+    // single char;
+    char grade = 'A';
+    char initial = 'j';
+    char dollarsign = '$';
+
+    //String -(objects which stores the words)
+    std::string name = "Jamal";
+    std::string place = "Chennai";
+    std::string gender = "Male";
+    int age = 23;
+    std::cout  << name << "\n"; 
+
+    std::cout << "Hello " << name << " youre " << age << " years old " << isStudent;
+
+     // Double :
+
+     //const -- > fixing the const value
+     const double PI = 3.14159;
+     
+     std::cout << PI;
+
+
+
+    
+  
+   
+    return 0;
+}
+
+-----------------------------------------------------------
+#namespace = provides a solution for preventing name conflicts,
+in large projects, Each entity needs a unique name.
+A namespace allows for identically named entities 
+as long as the namespace are different.
+
+
+
+-----------------------------------------------
+#include <iostream>
+
+
+namespace first {
+    int x = 1;
+}
+
+namespace second{
+    int x =2;
+}
+
+int main()
+{
+   int  x =100;
+
+    std::cout << x << "\n";
+    
+    std::cout << first::x << "\n";
+    std::cout << second::x;
+    
+  
+   
+    return 0;
+}
+
+-----------------------------------------------------------------
+
+#include <iostream>
+
+
+namespace first {
+    int x = 1;
+}
+
+namespace second{
+    int x =2;
+}
+
+int main()
+{
+
+    // Using namespace std::cout in top. We can use without std:: in below
+    using std::cout;
+
+   int  x =100;
+
+    cout << x << "\n";
+    
+    cout << first::x << "\n";
+    cout << second::x;
+    
+  
+   
+    return 0;
+}
+
+
+-------------------------------------------
+
+// typedef = reserved keyword used to create an additional name
+(alias) for another data type.
+New idenitfier for an existing type
+Helps with readability and reduces typos
+// but mostly using keyword is generally/ preferably used.
+using number_t = int;
+using text_t = std::string;
+
+
+------------------------------------------------------------
+#include <iostream>
+
+
+typedef std::string text_t;
+
+
+
+int main()
+{
+
+  std::string name = "Jamal";
+  std::cout << name;
+
+  text_t name2 = "Justin";
+  std::cout << name2;
+   
+    return 0;
+}
+
+----------------------------------------------
+
+//With using "using" keyword instead of typedef()
+
+#include <iostream>
+
+
+// typedef std::string text_t;
+// typedef int number_t;
+
+using number_t = int ;
+using text_t = std::string;
+
+int main()
+{
+
+  std::string name = "Jamal";
+  number_t  age = 10;
+  std::cout << name << "\n";
+  std::cout << age << "\n";
+
+  text_t name2 = "Justin";
+  std::cout << name2;
+   
+    return 0;
+}
+
+
+---------------------------------------------------------------
+//Arithmetic Operations:
+
+#include <iostream>
+
+
+int main()
+{
+    int students =  10;
+    std::cout << students << "\n";
+
+
+    students = students +1;
+    std::cout << students << "\n";
+
+    students = students + 1;
+    std::cout << students << "\n";
+
+    students = students + 1;
+    std::cout << students << "\n";
+
+    students+=1;
+    std::cout << students << "\n";
+
+    students++;
+    std::cout << students << "\n";
+
+    std::cout << "----------------\n";
+
+    students -=1;
+    std::cout << students << "\n";
+
+
+    students--;
+    std::cout << students << "\n";
+
+    std::cout <<"--------------------------------\n";
+
+    students = students *2;
+    std::cout << students << "\n";
+
+    students *= 2;
+    std::cout << students << "\n";
+
+
+    students *= 2;
+    std::cout << students << "\n";
+
+
+    std::cout <<"--------------------------------\n";
+
+    students = students /2;
+    std::cout << students << "\n";
+
+    students /= 2;
+    std::cout << students << "\n";
+
+    std::cout <<"--------------------------------\n Using Modulo \n";
+
+
+ students = students %3;
+    std::cout << students << "\n";
+
+    students %= 3;
+    std::cout << students << "\n";
+
+    int result = (2+2) / 2 + (7+7);
+
+    std:: cout << result;
+
+
+
+
+    return 0;
+}
+
+----------------------------------------------
+
+#include <iostream>
+
+
+int main()
+{
+   //type conversion = a conversion of one data type to another 
+   //Implicit = automatic 
+   // Explcit = procede value with new datatype (int -> float)
+
+   double x = (int) 3.14;
+
+   std::cout << x << "\n";
+
+    // number converted to char according to ASCII
+
+    //Implicit covert
+    char ch = 100;
+
+    std::cout << ch;
+
+
+    int correct = 8;
+    int questions = 10;
+
+    int result = correct/ (double) questions *100;
+
+    std::cout << "\n" << result;
+
+
+    return 0;
+}
+
+--------------------------------------------------------------
+
+#include <iostream>
+
+
+int main()
+{
+  
+    // number converted to char according to ASCII
+
+    //Implicit covert
+    char ch = 100;
+
+    std::cout << ch << "\n";
+
+    char ch2 = (char) 101;
+
+    std::cout << ch2 << "\n";
+
+    int correct = 8;
+    int questions = 10;
+
+    double percent = correct / (double) questions *100;
+
+    std::cout << percent << "%";
+
+
+
+    return 0;
+}
+
+
+-----------------------------------------------
+
+#include <iostream>
+
+
+int main()
+{
+
+    std::string name;
+    int age;
+
+   std::cout << "Whats your name?";
+   //std::cin >> name;     // Single char input
+
+   std::getline(std::cin, name);
+
+   std::cout << "Whats your age?";
+   std::cin >> age;
+
+
+
+   std::cout << "Hello " << name << ". Age : " << age ;
+
+
+    return 0;
+}
+
+-----------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   double a = 10.34;
+
+   double b = 11.22;
+
+
+   double absol = abs(b);
+double max = std::max(a,b);
+double min = std::min(a,b);
+
+double power = pow(9,2);
+double res = sqrt(9);
+
+double rounded = round(10.32);
+
+
+std::cout << "Max : " << max << " Min : " << min <<"\n " <<"Round :" << rounded;
+
+std:: cout << "Power : " << power << " Sqrt : " << res << " Absolute :" << absol;
+
+    return 0;
+}
+
+------------------------------------------------
+
+#Age Program
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    int age ;
+
+    std::cout << "Enter your age";
+    std::cin >> age;
+
+    if (age <= 18) {
+
+        std::cout << "Youre not allowed to enter";
+    }
+
+    else if (age > 100)
+    {
+        std::cout << "Youre too old to enter";
+    }
+
+    else{
+        std::cout << "Youre allowed to enter";
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    int month;
+
+    std::cout << "Enter the number between 1- 12 : ";
+    std::cin >> month;
+
+
+    switch (month)
+    {
+    case 1:
+    {
+        std::cout << " Its January";
+        break;
+    }
+
+    case 2:
+    {
+        std::cout << " Its February";
+        break;
+    }
+
+    case 3:
+    {
+        std::cout << " Its March";
+        break;
+    }
+
+    case 4:
+    {
+        std::cout << " Its April";
+        break;
+    }
+
+
+    case 5:
+    {
+        std::cout << " Its May";
+        break;
+    }
+
+    case 6:
+    {
+        std::cout << " Its June";
+        break;
+    }
+
+
+    case 7:
+    {
+        std::cout << " Its July";
+        break;
+    }
+
+    case 8:
+    {
+        std::cout << " Its August";
+        break;
+    }
+
+    case 9:
+    {
+        std::cout << " Its September";
+        break;
+    }
+    case 10:
+    {
+        std::cout << " Its October";
+        break;
+    }
+
+    case 11:
+    {
+        std::cout << " Its November";
+        break;
+    }
+
+    case 12:
+    {
+        std::cout << " Its December";
+        break;
+    }
+
+
+    default:{
+
+        std::cout << " Enter valid number !!";
+
+    }
+       
+    }
+    return 0;
+}
+
+------------------------------------------------------------
+
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    char alpha;
+
+    std::cout << "Enter Alphabet for fruit : ";
+    std::cin >> alpha;
+
+
+    switch (alpha)
+    {
+    case 'A':
+    {
+        std::cout << " Its Apple";
+        break;
+    }
+
+    case 'B':
+    {
+        std::cout << " Its Banana";
+        break;
+    }
+
+    case 'C':
+    {
+        std::cout << " Its Cherry";
+        break;
+    }
+
+    case 'D':
+    {
+        std::cout << " Its Dates";
+        break;
+    }
+
+    default : {
+        std::cout << "Enter the valid input";
+        break;
+    }
+
+
+    return 0;
+}
+
+}
+
+
+-------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    std::cout << "************CALCULATOR************";
+        char op;
+    double num1;
+    double num2;
+    double result ;
+
+
+    std:: cout << "Enter the op (+-*/) :";
+    std:: cin >> op;
+
+    std:: cout << "Enter the num1 :";
+    std:: cin >> num1;
+
+    
+    std:: cout << "Enter the num2 :";
+    std:: cin >> num2;
+    
+    
+    switch(op){
+
+        case '+':
+        {
+            result = num1+ num2;
+            std:: cout << result;
+            break;
+        }
+
+        
+        case '-':
+        {
+            result = num1- num2;
+            std:: cout << result;
+            break;
+        }
+
+        
+        case '*':
+        {
+            result = num1 * num2;
+            std:: cout << result;
+            break;
+        }
+
+        
+        case '/':
+        {
+            result = num1 / num2;
+            std:: cout << result;
+            break;
+        }
+
+        default :
+        {
+            std :: cout << "Enter the valid input";
+            break;
+        }
+    }
+
+    
+    std::cout << "**********************************";
+
+
+    return 0;
+}
+
+-----------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    // int num = 11;
+
+    // num %2 == 0 ? std::cout << "EVEN" : std::cout << "ODD";
+    
+
+    // bool ishungry = true;
+
+    // ishungry == true ? std::cout << "Hes hungry" : std:: cout << "Not hungty";
+
+    
+    int marks = 23;
+
+    // marks >= 50 ? std::cout << "PASS" : std::cout << "FAIL";
+
+    std::cout << (marks >= 50 ? "Youre Pass" : "Youre fail");
+
+
+
+
+    return 0;
+}
+-------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   int temp;
+
+   std::cout << "Enter the Temperature : ";
+   std :: cin >> temp;
+
+   if (temp > 0 && temp < 30){
+    std::cout << "Good Weather :)";
+   }
+
+   else
+   {
+    std::cout << "Bad Weather";
+   }
+
+
+
+    return 0;
+}
+-----------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   int temp;
+   int convtemp;
+
+   char unit;
+   std::cout << "*********Temperature Calculator*********";
+    std :: cout << "Enter the unit to convert F : for fahranheit and C : for Celcius";
+    std::cin >> unit;
+
+    if (unit == 'F' || unit == 'f'){
+
+        std::cout << "Enter the temperature in Celcius : ";
+        std :: cin >> temp;
+        convtemp = (temp * 1.8) + 32;
+        std :: cout << convtemp;
+    }
+
+    else if (unit == 'C' || unit == 'c')
+    {
+        std :: cout << "Enter the temperature in Fahrenheit";
+        std :: cin >> temp;
+        convtemp = (temp - 32) / 1.8;
+        std :: cout << convtemp;
+    }
+
+
+
+
+    return 0;
+}
+
+-----------------------------------------------------------------
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   std::string name ;
+
+   std::cout << "Enter the name : ";
+   std::getline(std::cin, name);
+
+   if (name.length() > 12){
+    std :: cout << "Name should not be above 12 chars";
+  
+   }
+
+   if (name.empty())
+   {
+    std ::cout << "Name is empty";
+   }
+
+   else {
+    std::cout << "\n"<< name << "\n";
+   }
+
+   name.append("@gmail.com");
+
+   std::cout << "Youre username is : "<< name;
+
+    return 0;
+}
+
+------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   std::string name ;
+
+   std::cout << "Enter the name : ";
+   std::getline(std::cin, name);
+
+   if (name.length() > 12){
+    std :: cout << "Name should not be above 12 chars";
+  
+   }
+
+   if (name.empty())
+   {
+    std ::cout << "Name is empty";
+   }
+
+   else {
+    std::cout << "\n"<< name << "\n";
+   }
+
+   name.append("@gmail.com");
+
+   std::cout << "Youre username is : "<< name;
+
+   std::cout << "\nLetter at 2nd index :" << name.at(2);
+   std::cout << "\n";
+   std::string word = "jack";
+
+   word.insert(0,"#");
+   std::cout << word;
+    return 0;
+}
+
+------------------------------------------------------
+//While loop
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    std::string name;
+
+    while(name.empty())
+    {
+        std::cout << "Enter the name";
+       std::getline( std::cin, name);
+
+    }
+    std::cout << "Welcome " << name;
+    return 0;
+}
+
+------------------------------------------------------
+// do while
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    int num;
+
+    do{
+        std::cout << "Enter the number above 0";
+        std::cin >> num;
+    }while(num <0);
+
+    return 0;
+}
+
+---------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   
+    for (int i = 0; i< 5; i++)
+    {
+        std::cout << i;
+    }
+
+    std::cout << "Hello world";
+
+    return 0;
+}
+
+-----------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   for (int i =1 ; i <= 3 ; i++)
+   {
+    std::cout << "Loop : " << i  <<"\n";
+    for (int j =0; j <=10 ; j++)
+    {
+        std::cout <<j <<" ";
+    }
+
+    std:: cout << "\n";
+   }
+
+ 
+
+    return 0;
+}
+
+--------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+
+    int size ;
+    char ch;
+    std::cout << "Enter the size :";
+    std ::cin >> size;
+    
+    std:: cout << "Enter the char";
+    std:: cin >> ch;
+    
+
+   for (int i =1 ; i <= size ; i++)
+   {
+  
+    for (int j =0; j <=size ; j++)
+    {
+        std::cout << ch <<" ";
+    }
+
+    std:: cout << "\n";
+   }
+
+ 
+
+    return 0;
+}
+
+
+------------------------------------------------------------------
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+
+   srand(time(NULL));
+
+   int num = rand();
+
+   int mod = num % 7;
+   std::cout << num << "\n"; 
+   std::cout << mod;
+
+    return 0;
+}
+
+
+---------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    srand(time(NULL));
+    std :: cout << "Welcome To prize corner\n";
+
+    int num = rand();
+
+    std::cout << num  << "\n";
+
+    int mod = num % 7;
+    std::cout << mod  << "\n";
+    switch (mod)
+    {
+    case  1:
+        std:: cout << "You won Tshirt ";
+        break;
+    
+    case  2:
+        std:: cout << "You won Laptop ";
+        break;
+    
+    case  3:
+        std:: cout << "You won Mobile ";
+        break;
+    case  4:
+            std:: cout << "Better Luck Next Time ";
+            break;
+    default:
+        std:: cout << "Better Luck Next Time ";
+        break;
+    }
+
+    return 0;
+}
+
+-------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+   srand(time(NULL));
+    int compGuess = rand();
+    int guess;
+
+
+    std::cout << "Enter the guess \n";
+    std::cin >> guess;
+
+    std:: cout << "Computer Guess : "<< compGuess << "\n";
+
+    if (guess > compGuess){
+
+        std :: cout << "Guess is too higher";
+    }
+
+    else if (guess < compGuess)
+    {
+        std:: cout << "Guess is too lower";
+    }
+
+    else{
+        std:: cout << "Guess is correct";
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+void printHelloworld();
+
+
+int main()
+{
+
+    printHelloworld();
+    printHelloworld();
+    printHelloworld();
+    return 0;
+}
+
+
+void printHelloworld()
+{
+    std:: cout <<  "Hello World ";
+    std:: cout <<  "Hello World ";
+    std:: cout <<  "Hello World ";
+    std:: cout <<  "Hello World ";
+    std:: cout <<  "Hello World |";
+    std:: cout << "\n";
+}
+
+
+--------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+void printHBD();
+
+
+void printHBD(std::string name, int age)
+{
+    std:: cout <<  "Hello  " << name <<" Age : " << age;
+    std:: cout <<  "Hello  " << name <<" Age : " << age;
+    std:: cout <<  "Hello  " << name <<" Age : "<< age;
+    std:: cout <<  "Hello  " << name <<" Age : " << age;
+    std:: cout <<  "Hello  " << name <<" Age : " << age;
+    std:: cout << "\n";
+}
+
+int main()
+{
+
+    printHBD("Jamal",12);
+    printHBD("Jamal",12);
+    printHBD("Jamal",12);
+    return 0;
+}
+
+------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+void bakingPizza();
+void bakingPizza(std :: string);
+
+int main()
+{
+
+    bakingPizza();
+    std::cout << "\n";
+    bakingPizza("pepporoni");
+  
+    return 0;
+}
+
+
+void bakingPizza(std::string toppings){
+
+    std::cout << "Pizza with "<< toppings <<" toppings ";
+
+}
+
+void bakingPizza(){
+
+    std :: cout << "Heres your pizza";
+}
+
+---------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+void bakingPizza();
+void bakingPizza(std :: string);
+
+int main()
+{
+
+    bakingPizza();
+    std::cout << "\n";
+    bakingPizza("pepporoni");
+  
+    return 0;
+}
+
+
+void bakingPizza(std::string toppings){
+
+    std::cout << "Pizza with "<< toppings <<" toppings ";
+
+}
+
+void bakingPizza(){
+
+    std :: cout << "Heres your pizza";
+}
+
+-------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+
+    int choice;
+    int amount;
+    int balance = 1000;
+
+    while(true)
+    {
+
+
+        std :: cout << "Enter the choice";
+        std :: cin >> choice;
+
+        switch(choice)
+        {
+            case 1:
+                std :: cout << "Enter the amount to deposit : ";
+                std :: cin >> amount;
+                if (amount < 0)
+                {
+                    std :: cout << "Amount should not be negative";
+                }
+                balance = balance + amount;
+                std :: cout << "Youre balance is : " << balance;
+                break;
+            
+            case 2:
+                std :: cout << "Enter the amount to withdraw : ";
+                std :: cin >> amount;
+                if (amount > balance)
+                {
+                    std :: cout << "Insufficient Balance";
+                    break;
+                }
+                balance = balance - amount;
+                break;
+            
+            case 3:
+                std :: cout << "Youre balance amount is : ";
+                
+                std :: cout << balance;
+                break;
+            
+            case 4:
+                std :: cout << "System is quitting";
+                return false;
+                break;
+
+
+
+            default:{
+            std :: cout << "Invalid Input ";
+                break;
+                }
+        
+
+        std :: cout << "Enter the amount";
+        std::cin >> amount;
+
+        
+    }
+    
+}
+}
+
+
+-----------------------------------------------------
+
+//Stone Paper Scissors;
+
+#include <iostream>
+#include <cmath>
+
+
+int PlayerWins = 0;
+int ComputerWins =0;
+
+char computechoice(){
+
+    
+srand(time(NULL));
+int compnum = rand () %3+1;
+
+if (compnum == 1){
+    return 'r';
+}
+if (compnum == 2)
+{
+    return 'p';
+}
+if (compnum == 3)
+{
+    return 's';
+}
+return 'x';
+}
+
+
+void computeWinner(char choice, char compchoice)
+{
+    std:: cout << "Player : " << choice << " Computer : " << compchoice << "\n"; 
+    if (choice == 'r')
+    {
+        if (compchoice == 'p')
+        {
+            std:: cout << "Computer wins";
+            ComputerWins += 1;
+   
+        }
+
+        if (compchoice == 's')
+        {
+            std :: cout << "Player wins";
+            PlayerWins +=1;
+           
+        }
+
+        else {
+            std :: cout << "Ties";
+            
+        }
+    }
+
+    else if (choice == 's')
+    {
+        if (compchoice == 'p')
+        {
+            std:: cout << "Player wins";
+            PlayerWins += 1;
+           
+        }
+
+        if (compchoice == 's')
+        {
+            std :: cout << "Ties";
+           
+        }
+
+        if (compchoice == 'r')
+        {
+            std :: cout << "Computer wins";
+
+            ComputerWins += 1;
+          
+        }
+
+    }
+
+    else if (choice == 'p')
+    {
+        if (compchoice == 'p')
+        {
+            std:: cout << "Ties";
+            
+            
+        }
+
+        if (compchoice == 's')
+        {
+            std :: cout << "Computer Wins";
+            ComputerWins +=1 ;
+            
+        }
+
+        if (compchoice == 'r')
+        {
+            std :: cout << "Player wins";
+
+            PlayerWins += 1;
+           
+        }
+
+    }
+
+
+
+}
+
+
+int main()
+{
+
+
+  
+    char choice ;
+    char compchoice;
+
+    while(true)
+    {
+
+        std:: cout << "\nEnter the choice : r - rock, p -paper , s- scissors , x - exit and t = scores  :: ";
+        std :: cin >> choice;
+
+        switch (choice)
+        {
+        case 'r':
+        {
+            compchoice =computechoice();
+            computeWinner(choice, compchoice);
+
+            break;
+        }
+
+        case 's':
+        {
+            compchoice =computechoice();
+            computeWinner(choice, compchoice);
+
+            break;
+        }
+
+        case 'p':
+        {
+            compchoice =computechoice();
+            computeWinner(choice, compchoice);
+
+            break;
+        }
+
+        case 'x':
+        {
+            std:: cout << "System is quiting";
+            return false;
+        }
+
+        case 't':
+        {
+            std:: cout << "SCORE :: Player : " << PlayerWins <<" | Computer : " <<ComputerWins;
+            break;
+        }
+
+
+        default:
+        std :: cout << "Enter the valid input";
+            break;
+        }
+    }
+    
+}
+
+------------------------------------------------------------
+//Arrays:
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    std :: string cars[]  = {"BMW","Chevrolet","Honda"};
+
+    int size = sizeof(cars) / sizeof(cars[0]);
+    std :: cout << size;
+
+    for (int i = 0; i < size ; i++)
+    {
+        std:: cout << cars[i] << "\n";
+    }
+    return 0;
+}
+
+---------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    
+    double prices[] = {12.34,34.56,75,22,45.22};
+    
+    int size = sizeof(prices) / sizeof(prices[0]);
+
+    for (int i = 0; i < size ; i++)
+    {
+        std:: cout << prices[i] << "\n";
+    }
+    return 0;
+}
+
+----------------------------------------------------
+
+//sizeof
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    
+    int point = 23;
+    double percent = 77.44;
+    std::string word = "Hello";
+    float  flt = 33.44;
+    bool istrue = true;
+    char ch = 'a';
+    std :: string names[] = {"Jamal","Justin","jake"};
+    char grades[] = {'a','b','c','d','e','f','g','h'};
+    std:: cout << sizeof(point) << "bytes\n";
+    std:: cout << sizeof(percent) << "bytes\n";
+    std:: cout << sizeof(word) << "bytes\n";
+    std:: cout << sizeof(flt) << "bytes\n";
+    std:: cout << sizeof(istrue) << "bytes\n";
+    std:: cout << sizeof(ch) << "bytes\n";
+    std:: cout << sizeof(grades) << "bytes\n";
+    int size = sizeof(names)/sizeof(names[0]);
+    std :: cout << size << " elements";
+    return 0;
+}
+
+-----------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    //Foreach loop in c++ as for;
+    std:: string cartoons[] = {"Doraemon", "Shinchan","Chotta Bheem","Kick Buttowski","Jackie Chan"};
+
+    int marks[] = {66,76,55,88,87};
+    for(std:: string cartoon : cartoons)
+    {
+        std :: cout << cartoon << "\n";
+    }
+
+    for(int i : marks)
+    {
+        std :: cout << i << "\n";
+    }
+    return 0;
+}
+
+-------------------------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    //Foreach loop in c++ as for;
+    std:: string cartoons[] = {"Doraemon", "Shinchan","Chotta Bheem","Kick Buttowski","Jackie Chan"};
+
+    int marks[] = {66,76,55,88,87};
+    for(std:: string cartoon : cartoons)
+    {
+        std :: cout << cartoon << "\n";
+    }
+
+    for(int i : marks)
+    {
+        std :: cout << i << "\n";
+    }
+    return 0;
+}
+
+-----------------------------------------------------------------------
+//Passing an array in function:
+
+#include <iostream>
+#include <cmath>
+
+double printsum(double numbers[],int sum);
+
+int main()
+{
+  
+    double numbers[] = {2.3,4.34,223.3,33,100};
+    int size = sizeof(numbers)/sizeof(numbers[0]);
+    printsum(numbers,size);
+    
+    return 0;
+}
+
+double printsum(double numbers[],int size){
+
+    
+    double sum =0;
+    for (int i = 0; i< size ; i++)
+    {   
+        sum += numbers[i];
+    }
+
+    std::cout << "Sum : "<< sum;
+    return sum;
+}
+
+-----------------------------------------------------------------------------
+
+//Searching an element in Array:
+
+#include <iostream>
+#include <cmath>
+
+int findIndex(int numbers[],int size, int element);
+
+int main()
+{
+  int numbers[] = {23,4,3,2,5,64,65,100};
+
+  int size = sizeof(numbers)/sizeof(numbers[0]);
+  findIndex(numbers,size,23);
+
+    return 0;
+}
+
+int findIndex(int numbers[],int size,int element){
+    int i;
+    for (i =0; i < size; i++)
+    {
+        if (numbers[i] == element)
+        {
+            std::cout << element << " is found in index of "<< i;
+            break;
+        }
+    }
+
+    return i;
+}
+
+------------------------------------------------------------------------
+// Search for food in array;
+
+#include <iostream>
+#include <cmath>
+
+
+void findIndex(std:: string foods[],int size, std::string food);
+
+int main()
+{
+  
+    std::string foods[] = {"Pizza","Burger","Fries","Donut","Coffe","MilkShake","Mojito","Soda"};
+    int size = sizeof(foods)/ sizeof(foods[0]);
+    findIndex(foods,size,"Donut");
+
+    return 0;
+}
+
+
+void findIndex(std:: string foods[],int size, std::string food)
+{
+
+    int i;
+    for (i =0 ; i< size; i++ )
+    {
+        if (foods[i] == food)
+        {
+            std::cout << "Food is available at index :" << i;
+        }
+    }
+
+    return ;
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+//Bubble Sort:
+
+#include <iostream>
+#include <cmath>
+
+void bubblesort(int numbers[], int size);
+
+int main()
+{
+  int numbers[] = {34,22,33,44,1,2,77};
+
+  int size = sizeof(numbers)/ sizeof(numbers[0]);
+  bubblesort(numbers,size);
+
+  std :: cout << size << "||";
+  for(int i =0; i < size; i++){
+    std:: cout << numbers[i] <<" ";
+  }
+
+    return 0;
+}
+
+void bubblesort(int numbers[], int size)
+{
+
+    for (int i = 0; i < size -1; i++)
+    {
+        int temp ;
+        for (int j =0; j < size -i -1; j++)
+        {
+            if (numbers[j] > numbers[j+1])
+            {
+                int temp = numbers[j];
+                numbers[j] = numbers[j+1];
+                numbers[j+1] = temp;
+            }
+        }
+    }
+}
+
+---------------------------------------------------------------
+
+//40# (03:31:19) Fill an array with user input 🌭
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+  // {"Pizza","Idly","Dosa","Pongal","Vadai","Juice"};
+
+  int size = 30;
+    std::string foods[size];
+
+
+    // fill(foods, (foods+size)/3,"pizza" );
+    // fill( (foods+size)/3, ((foods+size)/3)*2,"Idly");
+    // fill( ((foods+size)/3)*2, (foods+size),"Idly");
+    
+
+    fill(foods, foods+size/3,"pizza" );
+    fill(foods+size/3, foods+size/3*2,"burger" );
+    fill(foods+size/3*2, foods+size,"fries" );
+
+    int counter = 1;
+    for(std::string food : foods){
+        std::cout<< counter << " " << food ;
+        counter++;
+    }
+
+
+
+
+    return 0;
+}
+
+---------------------------------------------------------------------
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+ 
+    int size = 10;
+
+    std:: string foods[size];
+    std :: string temp;
+
+    for (int i =0; i < size ; i++)
+    {
+        std::cout << "Enter the favourite food name or enter q for quit :";
+        std :: cin >> temp;
+
+        if (temp == "q")
+        {
+            break;
+        }
+        else{
+            foods[i] = temp;
+        }
+    }
+
+
+    // !foods[i].empty() --> first it check current index of array is empty. if not empty it prints else it leaves the loop;
+    for (int i = 0 ; !foods[i].empty(); i++)
+    {
+        std:: cout << foods[i] << " ";
+    }
+
+    return 0;
+}
+
+------------------------------------------------------------------------------------------
+//41# (03:38:17) Multidimensional arrays ⬜
+#include <iostream>
+
+
+int main()
+{
+ 
+    std::string cars[][3] = {{"BMW", "Audi","BYD"},
+                            {"Rolls Royse","Ferrari","Tesla"},
+                            {"Lamborghini","Kia","Honda"}};
+
+    int rows = sizeof(cars)/sizeof(cars[0]);
+    int cols = sizeof(cars[0])/sizeof(cars[0][0]);
+
+    for (int i =0; i< rows ; i++)
+    {
+        for (int j =0; j< cols; j++)
+        {
+            std:: cout << cars[i][j] << " ";
+        }
+
+        std::cout << "\n";
+    }
+
+    return 0;
+}
+
+-----------------------------------------------------------------
+
+//42# (03:45:57) QUIZ GAME 💯
+
+#include <iostream>
+
+
+int main()
+{
+ 
+    std::string questions[4] = {"1. Who is the inventor of C++ ?", "2. Is Earth Round?", 
+        "3. Who is the father of Computer?","4. What year was C++ created?"};
+
+    
+    std::string options[][4] ={ {"A. Bjarne Stroupstrup","B. Dennis Ritchie","C. Sebastian Ramirez","D. Sam Altman : "},
+    {"A. Yes","B. No","C. Both Round and Flat","D. What is Earth? : "},
+    {"A. Charles Babbage","B. Larry Elison","C. Larry Page","D. Pascal :"},
+    {"A. 1969","B. 1975","C. 1985","D. 1989 : "}};
+
+    char questionKeys[] = {'A','A','A','C'};
+
+    int score =0;
+
+    char guess;
+    std :: cout << "::: QUIZ :::";
+    for (int i =0 ; i< 4; i++)
+    {
+        std:: cout << questions[i];
+        for (int j =0; j < 4; j++)
+        {
+            std:: cout << options[i][j];
+           
+
+    
+        }
+
+        std:: cin >> guess;
+
+        guess = toupper(guess);
+
+        if (guess == questionKeys[i])
+        {
+            std:: cout << "Youre Correct";
+            score++;
+        }
+
+        else{
+            std::cout << "Youre Wrong";
+        }
+    }
+
+    std:: cout << "** RESULT **\n";
+
+    int size = sizeof(questions)/ sizeof(questions[0]);
+
+    int result = score/(double) size * 100;
+
+    std:: cout << result << "%";
+
+
+
+    return 0;
+}
+
+------------------------------------------------------------------
+
+
+//43# (03:57:42) Memory addresses 🏠
+#include <iostream>
+
+
+int main()
+{
+ std::string  name = "Jamal";
+ int age = 23;
+ bool student = true;
+
+ std :: cout << &name << "\n";
+ std :: cout << &age << "\n";
+ std :: cout << &student;
+ 
+
+    return 0;
+}
+
+--------------------------------------------------------------------------
+//44# (04:00:31) Pass by VALUE vs pass by REFERENCE 📧
+
+#include <iostream>
+
+
+void swap(std :: string &A, std :: string &B );
+int main()
+{
+ std :: string A = "Jamal";
+ std :: string B = "Jake";
+
+ std :: cout << &A << "\n";
+ std :: cout << &B;
+ 
+ swap(A,B);
+
+ std:: cout <<"The Values of A and B by passing with reference : \n";
+ std:: cout << A;
+ std :: cout << B;
+
+
+    return 0;
+}
+
+void swap(std :: string &A, std :: string &B )
+{
+
+
+    std :: string temp = B;
+    B = A;
+    A = temp;
+
+    std :: cout << "\nThe memory address in function :\n";
+    std :: cout << &A << "\n";
+    std :: cout << &B << "\n";
+
+}
+
+---------------------------------------------------------
+//45# (04:04:47) Const parameters 🧱
+#include <iostream>
+
+void  change( std:: string &name , int &age );
+
+int main()
+{
+
+    std :: string name= "Jamal";
+    int age = 23;
+
+    change(name,age);
+
+    std :: cout << name;
+    
+    std :: cout << age;
+
+    return 0;
+}
+
+
+void  change( const std:: string &name ,const int &age )
+{   
+    name = "";
+    age = 0;
+
+}
+
+------------------------------------------------------------------------
+//46# (04:07:54) Credit card validator program 💳
+
+#include <iostream>
+
+
+int checkValidCardNumber(std :: string number);
+
+int evenDigitsValid(std:: string number);
+int oddDigitsValid(std:: string number);
+
+int main()
+{
+    
+  // 6011 0009 9013 9424  
+  
+  //Steps :
+    // Step 1: Take every digts even positions (1,3,5 ... so on) digits from right to left and doubling the number .
+    //if doubled element is 2 digits and then split then up.
+    
+    //Step 2 : Add the elements from right to left (Step 1)  .
+
+    //Step 3: `Take every digits odd positions (0,2,4,6.. so on) digits from right to left and add thems up.
+
+    //Step 4: Add (step 2 and step 3);
+
+    //Step 5 : If step 4 is divisible by 10 then it is valid credit card number.
+
+
+    int valid = 0;
+    int invalid = 0;
+    for (unsigned long long i = 4000000000000000 ; i<= 4000000001000000; i++)
+    {
+        std :: cout << i;
+      
+
+    if (checkValidCardNumber(std :: to_string(i)) == 1){
+        valid +=1;
+    }
+    else{
+        invalid +=1;
+}
+
+
+    }
+
+    std :: cout <<"Valid Cards : "<< valid;
+    std :: cout <<"Invalid Cards : "<< invalid;
+     
+
+    return 0;
+}
+
+
+int checkValidCardNumber(std :: string number){
+
+   int result = evenDigitsValid(number) + oddDigitsValid(number);
+
+    if (result % 10 == 0)
+    {
+        std :: cout << result ;
+       std :: cout << "Valid Card Number";
+       return 1;
+    }
+
+    else
+    {
+      std::  cout << result ;
+      std::  cout << "Not Valid Card Number";
+      return 0;
+    }
+
+
+}
+
+int getDigit(int no){
+    
+    return (no % 10 ) + (no / 10 % 10);
+}
+
+int evenDigitsValid(std:: string number){
+
+    int sum =0;
+    for (int i = number.size() -2; i >= 0 ; i -= 2){
+        int digit = number[i] - '0';
+        sum += getDigit(digit*2);
+    }
+    std :: cout << "Sum of Even : " << sum << " \n"; 
+    return sum;
+}
+
+int oddDigitsValid(std:: string number){
+
+    int sum =0;
+    for (int i = number.size() -1; i >= 0 ; i-= 2){
+        int digit = number[i] - '0';
+        sum += getDigit(digit);
+    }
+
+  std ::  cout << "Sum of Odd : " << sum << " \n"; 
+    return sum;
+}
+
+----------------------------------------------------------------------
+//47# (04:17:56) Pointers 👈
+
+#include <iostream>
+
+int main()
+{
+    std :: string name = "Jamal";
+    int age = 23;
+
+    std :: string freePizzas[3] = {"Pizza1","Pizza2","Pizza3"};
+
+    std :: string  *pName = &name;
+    int *pAge = &age;
+    std :: string *pfreePizzas = freePizzas;
+
+
+    std :: cout << *pName << "\n";
+    std :: cout << pName << "\n";
+    std :: cout << *pAge << "\n";
+    std :: cout << pAge << "\n";
+    std :: cout << pfreePizzas << "\n";
+    std :: cout << *pfreePizzas << "\n";
+    
+
+    return 0;
+}
+
+----------------------------------------------------------
+// 49# (04:27:17) TIC TAC TOE game ⭕
+#include <iostream>
+using namespace std;
+
+char board[3][3];
+char player = 'X';
+char ai = 'O';
+
+void initializeBoard() {
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            board[i][j] = ' ';
+}
+
+void displayBoard() {
+    cout << "\n";
+    for (int i = 0; i < 3; i++) {
+        cout << " ";
+        for (int j = 0; j < 3; j++) {
+            cout << board[i][j];
+            if (j < 2) cout << " | ";
+        }
+        if (i < 2) cout << "\n-----------\n";
+    }
+    cout << "\n\n";
+}
+
+bool isWin(char symbol) {
+    for (int i = 0; i < 3; i++) {
+        if ((board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) ||
+            (board[0][i] == symbol && board[1][i] == symbol && board[2][i] == symbol))
+            return true;
+    }
+
+    if ((board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) ||
+        (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol))
+        return true;
+
+    return false;
+}
+
+bool isDraw() {
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            if (board[i][j] == ' ')
+                return false;
+    return true;
+}
+
+void playerMove() {
+    int move;
+    cout << "Your move (1-9): ";
+    cin >> move;
+
+    if (move < 1 || move > 9) {
+        cout << "Invalid input. Try again.\n";
+        playerMove();
+        return;
+    }
+
+    int row = (move - 1) / 3;
+    int col = (move - 1) % 3;
+
+    if (board[row][col] != ' ') {
+        cout << "Cell already taken. Try again.\n";
+        playerMove();
+        return;
+    }
+
+    board[row][col] = player;
+}
+
+void aiMove() {
+    // Simple AI: pick first available cell
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            if (board[i][j] == ' ') {
+                board[i][j] = ai;
+                cout << "AI placed O.\n";
+                return;
+            }
+}
+
+int main() {
+    initializeBoard();
+    displayBoard();
+
+    while (true) {
+        playerMove();
+        displayBoard();
+
+        if (isWin(player)) {
+            cout << " You win!\n";
+            break;
+        }
+        if (isDraw()) {
+            cout << "🤝 It's a draw!\n";
+            break;
+        }
+
+        aiMove();
+        displayBoard();
+
+        if (isWin(ai)) {
+            cout << "😈 AI wins!\n";
+            break;
+        }
+        if (isDraw()) {
+            cout << "🤝 It's a draw!\n";
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+----------------------------------------------------
+//50# (04:46:26) Dynamic memory 🧠
+
+#include <iostream>
+
+
+int main() {
+
+    int size ;
+
+    char *pGrades = NULL;
+    std :: cout << "Enter the size : ";
+    std :: cin >> size;
+
+    pGrades = new char[size];
+
+    for (int i =0 ; i < size; i++)
+    {
+        std :: cin >> pGrades[i];
+    }
+
+    for (int i =0; i< size ;i++)
+    {
+        std :: cout << pGrades[i];
+    }
+   
+    return 0;
+}
+
+
+----------------------------------------------------
+
+51# (04:52:15) Recursion 😵
+
+#include <iostream>
+
+
+void walk (int steps){
+
+    if (steps > 0){
+    std :: cout << "Youre walking" << steps << "\n";
+    walk(steps-1);
+
+    }
+
+    
+}
+
+
+int main() {
+
+    walk(10);
+
+
+    return 0;
+}
+
+
+----------------------------------------------------------------------------------------
+
+51# (04:52:15) Recursion 😵
+
+#include <iostream>
+
+int factorial(int number){
+
+    if (number > 1)
+    {
+        return number * factorial(number - 1);
+    }
+
+    else
+    {
+        return 1;
+    }
+}
+
+int factiterative(int number )
+{
+    int fact = 1;
+    for (int i =1; i <= number ; i++)
+    {
+        fact = fact * i;
+    }
+
+    return fact;
+}
+
+int main() {
+
+    int fact = factorial(10);
+
+
+    int factiter = factiterative(10);
+
+    std :: cout << "Factorial with recursive : " << fact << "\n";
+    
+    std :: cout << "Factorial with iterative : "<< factiter;
+    return 0;
+}
+
+----------------------------------------------------------------------------
+//52# (04:58:35) Function templates 🍪
+
+#include <iostream>
+
+template <typename T, typename U>
+
+auto max(T x, U y){
+
+    return (x > y) ? x : y;
+}
+
+int main() {
+
+   std ::cout << max(10,22.3) ;
+    return 0;
+}
+
+-----------------------------------------------------
+
+//53# (05:03:49) Structs 🏗️
+
+#include <iostream>
+
+struct Student
+{
+    std :: string name;
+    double gpa;
+    bool enrolled;
+};
+
+
+int main() {
+
+    
+    Student student1;
+
+    student1.name = "Jack";
+    student1.gpa = 2.5;
+    student1.enrolled = true;
+
+    
+    std :: cout << student1.name;
+    
+    std :: cout << student1.gpa;
+    
+    std :: cout << "\n" << student1.enrolled;
+
+    return 0;
+}
+
+--------------------------------------------------------------
+
+//54# (05:08:49) Pass structs as arguments 🚚
+
+#include <iostream>
+
+struct Car
+{
+    std :: string model;
+    int year;
+    std :: string color; 
+};
+
+
+void printCar(Car car); // car -> pass by value
+void paintCar(Car &car, std :: string color); // &car -> pass by reference
+
+int main() {
+
+    Car car1;
+    car1.model = "Audi";
+    car1.year = 2024;
+    car1.color = "red";
+
+    Car car2;
+    car1.model = "Honda";
+    car1.year = 2023;
+    car1.color = "blue";
+
+    printCar(car1);
+    std :: cout << "\n";
+    paintCar(car1, "silver");
+ 
+    printCar(car1);
+}
+
+
+void printCar(Car car){
+
+    std :: cout << car.model << "\n" << car.year << "\n" << car.color;
+}
+
+void paintCar(Car &car, std :: string color){
+    car.color = color;
+}
+
+--------------------------------------------------------------------
+
+55# (05:14:17) Enums 📅
+
+#include <iostream>
+
+enum Day  {sunday = 0,monday = 1, tuesday =2 , wednesday = 3, thursday = 4, friday = 5, saturday = 6};
+
+
+
+int main() {
+
+
+    Day today = friday;
+
+    switch (today)
+    {
+    case monday:
+        std :: cout << "Its Monday";
+        break;
+
+    
+    case tuesday:
+        std :: cout << "Its Tuesday";
+        break;
+
+    case wednesday:
+        std :: cout << "Its Wednesday";
+        break;
+
+    case thursday:
+        std :: cout << "Its Thursday";
+        break;
+    
+    
+    case friday:
+        std :: cout << "Its Friday";
+        break;
+    
+    case saturday:
+        std :: cout << "Its Saturday";
+        break;
+
+
+    default:
+    std:: cout << "Invalid Input";
+        break;
+    }
+
+}
+
+--------------------------------------------------------------------------
+
+// 56# (05:18:38) Object Oriented Programming 🧍
+
+#include <iostream>
+
+
+class Human{
+
+    public:
+
+    std :: string name;
+    int age;
+    std :: string occupation;
+
+    void eat(){
+        std :: cout << "He is eating\n";
+    }
+
+    
+    void sleep(){
+        std :: cout << "He is sleeping\n";
+    }
+
+    
+    void work(){
+        std :: cout << "He is working\n";
+    }
+};
+
+int main() {
+
+
+    Human human1;
+    human1.name = "Jamal";
+    human1.age = 23;
+    human1.occupation = "Developer";
+    
+    human1.work();
+    human1.eat();
+    human1.sleep();
+    return 0;
+    
+}
+
+-----------------------------------------------------------
+
+#include <iostream>
+
+class Car{
+
+    public:
+    std :: string brand;
+    int year;
+    float price;
+
+    void breaking(){
+        std :: cout << "Break is applied";
+    }
+
+    
+    void acceleration(){
+        std :: cout << "Car is accelerated";
+    }
+};
+
+
+int main() {
+
+
+    Car car1;
+
+    car1.brand = "BMW";
+   car1.year = 2024;
+   car1.price = 12400.33;
+
+   car1.breaking(); 
+    return 0;
+    
+}
+
+
+------------------------------------------------------
+//57# (05:29:32) Constructors 👷
+#include <iostream>
+
+class Car{
+
+    public :
+    std :: string model;
+    int year;
+    float price;
+
+    Car(std :: string model, int year, float price){
+
+        this->model = model;
+        this->year = year;
+        this->price = price;   
+    }
+
+    void carDetails(){
+
+        std:: cout << "Car model : "<< model <<std :: endl;
+        
+        std:: cout << "Car price : "<< price <<std :: endl;
+        std:: cout << "Car year : "<< year <<std :: endl;
+    }
+    
+};
+
+int main() {
+
+
+    Car car("BMW - A1",2025, 50000.45);
+
+    car.carDetails();
+  
+    return 0;
+    
+}
+
+----------------------------------------------------------
+//58# (05:38:26) Constructor overloading 👨‍🍳
+
+
+#include <iostream>
+
+class Pizza{
+
+    public :
+    std :: string topping1;
+    std :: string topping2;
+    std :: string topping3;
+
+    Pizza(std :: string topping1)
+    {
+        this->topping1 = topping1;
+        this->topping2 = "";
+        this->topping3 = "";
+    }
+
+    
+    Pizza(std :: string topping1,std :: string topping2)
+    {
+        this->topping1 = topping1;
+        this->topping2 = topping2;
+        this->topping3 = "";
+    }
+        
+    Pizza(std :: string topping1,std :: string topping2,std :: string topping3)
+    {
+        this->topping1 = topping1;
+        this->topping2 = topping2;
+        this->topping3 = topping3;
+    }
+
+
+    void displayPizza()
+    {
+
+        if (!topping1.empty())
+        {
+            std :: cout << "Your's Delicious Pizza Toppings : \n";
+            std :: cout << "Topping 1 : " << topping1 << "\n";
+        }
+        
+        if (!topping2.empty())
+        {
+            std :: cout << "Topping 2 : " << topping2 << "\n";
+        }
+
+        if (!topping3.empty())
+        {
+            std :: cout << "Topping 3 : " << topping3 << "\n";
+        }
+    }
+
+};
+int main() {
+
+
+    Pizza pizza1("Chicken");
+    Pizza pizza2("Veg", "Cheese");
+    Pizza pizza3("Tuna","Cheese","Corn");
+
+    pizza1.displayPizza();
+    std :: cout << "\n";
+    pizza2.displayPizza();
+    std :: cout << "\n";
+    pizza3.displayPizza();
+    
+
+
+    return 0;
+    
+}
+
+--------------------------------------------------------
